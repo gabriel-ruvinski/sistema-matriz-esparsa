@@ -12,19 +12,19 @@ typedef struct nodo {
 
 // ===== FUNÇÕES LISTA =====
 
-Matriz_Esparsa* alocar_nodo(float dado, int lin, int col);
-void inserir(Matriz_Esparsa **cabeca, float dado, int lin, int col);
-Matriz_Esparsa* buscar(Matriz_Esparsa *cabeca, int lin, int col);
-void liberar_lista(Matriz_Esparsa **cabeca);
+Matriz_Esparsa* alocarNodo(float dado, int lin, int col); // Alocar novo nó
+void inserir(Matriz_Esparsa **cabeca, float dado, int lin, int col); // Inserir um nó na lista
+Matriz_Esparsa* buscar(Matriz_Esparsa *cabeca, int lin, int col); // Buscar elemento em determinada posição
+void liberarLista(Matriz_Esparsa **cabeca); // Liberar a lista da memória
 
 // ===== FUNÇÕES MATRIZES =====
 
-Matriz_Esparsa* ler_matriz(int linhas, int colunas);
-void imprimir_matriz(Matriz_Esparsa *cabeca, int linhas, int colunas);
-void imprimir_diagonal(Matriz_Esparsa *cabeca, int linhas, int colunas);
-Matriz_Esparsa* somar_matrizes(Matriz_Esparsa *m1, Matriz_Esparsa *m2, int linhas, int colunas);
-Matriz_Esparsa* subtrair_matrizes(Matriz_Esparsa *m1, Matriz_Esparsa *m2, int linhas, int colunas);
-Matriz_Esparsa* multiplicar_matrizes(Matriz_Esparsa *m1, int lin1, int col1, Matriz_Esparsa *m2, int lin2, int col2);
-Matriz_Esparsa* transposta(Matriz_Esparsa *cabeca, int linhas, int colunas);
+Matriz_Esparsa* lerMatriz(int linhas, int colunas); // Lê a matriz do teclado e armazena apenas os diferentes de zero
+void imprimirMatriz(Matriz_Esparsa *cabeca, int linhas, int colunas); // Imprime a matriz completa (zeros e não-zeros)
+void imprimirDiagonal(Matriz_Esparsa *cabeca, int linhas, int colunas); // Imprime apenas a diagonal principal
+Matriz_Esparsa* somarMatrizes(Matriz_Esparsa *m1, Matriz_Esparsa *m2, int linhas, int colunas); // Soma duas matrizes
+Matriz_Esparsa* subtrairMatrizes(Matriz_Esparsa *m1, Matriz_Esparsa *m2, int linhas, int colunas); // Subtrai duas matrizes (m1 - m2)
+Matriz_Esparsa* multiplicarMatrizes(Matriz_Esparsa *m1, int lin1, int col1, Matriz_Esparsa *m2, int lin2, int col2); // Multiplica duas matrizes
+Matriz_Esparsa* transposta(Matriz_Esparsa *cabeca, int linhas, int colunas); // Gera a matriz transposta
 
 #endif
